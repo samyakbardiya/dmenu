@@ -13,12 +13,12 @@ static const char *fonts[] = {
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
 static const char *dynamic     = NULL;      /* -dy option; dynamic command to run on input change */
 static const char *colors[SchemeLast][2] = {
-    /*     fg        bg     */
-	[SchemeNorm] = { "#f8f8f2", "#282a36" },
-	[SchemeSel] = { "#282a36", "#ff5555" },
-	[SchemeSelHighlight] = { "#282a36", "#f1fa8c" },
+                        	/*     fg        bg     */
+	         [SchemeNorm] = { "#f8f8f2", "#282a36" },
+	          [SchemeSel] = { "#282a36", "#ff5555" },
+	 [SchemeSelHighlight] = { "#282a36", "#f1fa8c" },
 	[SchemeNormHighlight] = { "#f1fa8c", "#6272a4" },
-	[SchemeOut] = { "#000000", "#00ffff" },
+	          [SchemeOut] = { "#000000", "#00ffff" },
 };
 /* -l and -g options; controls number of lines and columns in grid if > 0 */
 static unsigned int lines      = 0;

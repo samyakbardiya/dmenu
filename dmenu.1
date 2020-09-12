@@ -1,40 +1,53 @@
 .TH DMENU 1 dmenu\-VERSION
 .SH NAME
-dmenu \- dynamic menu
+dmenu \- dynamic menu (samyak039)
 .SH SYNOPSIS
 .B dmenu
-.RB [ \-bfiv ]
+.RB [ \-b ]
+.RB [ \-c ]
+.RB [ \-dy
+.IR command ]
+.RB [ \-f ]
+.RB [ \-fn
+.IR font ]
 .RB [ \-g
 .IR columns ]
+.RB [ \-h
+.IR height ]
 .RB [ \-l
-.IR lines ]
+.IR rows ]
 .RB [ \-m
 .IR monitor ]
 .RB [ \-p
 .IR prompt ]
-.RB [ \-fn
-.IR font ]
+.RB [\-P ]
+.RB [ \-s ]
+.RB [ \-v ]
+.RB [ \-w
+.IR windowid ]
+.RB [ \-wm ]
 .RB [ \-nb
 .IR color ]
 .RB [ \-nf
-.IR color ]
-.RB [ \-sb
-.IR color ]
-.RB [ \-sf
 .IR color ]
 .RB [ \-nhb
 .IR color ]
 .RB [ \-nhf
 .IR color ]
+.RB [ \-sb
+.IR color ]
+.RB [ \-sf
+.IR color ]
 .RB [ \-shb
 .IR color ]
 .RB [ \-shf
 .IR color ]
-.RB [ \-w
-.IR windowid ]
-.RB [ \-wm ]
+.P
+.BR dmenu_path " ..."
 .P
 .BR dmenu_run " ..."
+.P
+.BR dmenu_run_history " ..."
 .SH DESCRIPTION
 .B dmenu
 is a dynamic menu for X, which reads a list of newline\-separated items from
@@ -42,33 +55,47 @@ stdin.  When the user selects an item and presses Return, their choice is printe
 to stdout and dmenu terminates.  Entering text will narrow the items to those
 matching the tokens in the input.
 .P
+.B dmenu_path
+find and cache a list of executables
+.P
 .B dmenu_run
 is a script used by
 .IR dwm (1)
 which lists programs in the user's $PATH and runs the result in their $SHELL.
+.P
+.B dmenu_run_history
+is a script used by
+.IR dwm (1)
+which lists programs in the user's $PATH and runs the result in their $SHELL, and is sorted in frequently used order.
 .SH OPTIONS
 .TP
 .B \-b
 dmenu appears at the bottom of the screen.
 .TP
+.BI \-bw " border_width"
+a border around the dmenu box.
+.TP
 .B \-c
 dmenu appears centered on the screen.
+.TP
+.B \-dy " command"
+which makes dmenu run the command given to it whenever input is changed with the current input as the last argument and update the option list according to the output of that command.
 .TP
 .B \-f
 dmenu grabs the keyboard before reading stdin if not reading from a tty. This
 is faster, but will lock up X until stdin reaches end\-of\-file.
 .TP
-.B \-i
-dmenu matches menu items case insensitively.
+.BI \-fn " font"
+defines the font or font set used.
 .TP
 .BI \-g " columns"
 dmenu lists items in a grid with the given number of columns.
 .TP
-.BI \-l " lines"
-dmenu lists items in a grid with the given number of lines.
-.TP
 .BI \-h " height"
 dmenu uses a menu line of at least 'height' pixels tall, but no less than 8.
+.TP
+.BI \-l " rows"
+dmenu lists items in a grid with the given number of lines.
 .TP
 .BI \-m " monitor"
 dmenu is displayed on the monitor number supplied. Monitor numbers are starting
@@ -77,8 +104,20 @@ from 0.
 .BI \-p " prompt"
 defines the prompt to be displayed to the left of the input field.
 .TP
-.BI \-fn " font"
-defines the font or font set used.
+.B \-P
+dmenu will not directly display the keyboard input, but instead replace it with dots. All data from stdin will be ignored.
+.TP
+.BI \-s 
+enables case sensitive matching
+.TP
+.B \-v
+prints version information to stdout, then exits.
+.TP
+.BI \-w " windowid"
+embed into windowid.
+.TP
+.BI \-wm
+Display as a managed WM window (e.g. don't set overide_redirect flag)
 .TP
 .BI \-nb " color"
 defines the normal background color.
@@ -89,32 +128,23 @@ and X color names are supported.
 .BI \-nf " color"
 defines the normal foreground color.
 .TP
-.BI \-sb " color"
-defines the selected background color.
-.TP
-.BI \-sf " color"
-defines the selected foreground color.
-.TP
 .BI \-nhb " color"
 defines the normal highlight background color.
 .TP
 .BI \-nhf " color"
 defines the normal highlight foreground color.
 .TP
+.BI \-sb " color"
+defines the selected background color.
+.TP
+.BI \-sf " color"
+defines the selected foreground color.
+.TP
 .BI \-shb " color"
 defines the selected highlight background color.
 .TP
 .BI \-shf " color"
 defines the selected highlight foreground color.
-.TP
-.B \-v
-prints version information to stdout, then exits.
-.TP
-.BI \-w " windowid"
-embed into windowid.
-.TP
-.BI \-wm
-Display as a managed WM window (e.g. don't set overide_redirect flag)
 .SH USAGE
 dmenu is completely controlled by the keyboard.  Items are selected using the
 arrow keys, page up, page down, home, and end.
