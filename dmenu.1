@@ -47,7 +47,11 @@ dmenu \- dynamic menu (samyak039)
 .P
 .BR dmenu_run " ..."
 .P
+.BR dmenu_run_i " ..."
+.P
 .BR dmenu_run_history " ..."
+.P
+.BR dmenu_run_history_i " ..."
 .SH DESCRIPTION
 .B dmenu
 is a dynamic menu for X, which reads a list of newline\-separated items from
@@ -63,10 +67,16 @@ is a script used by
 .IR dwm (1)
 which lists programs in the user's $PATH and runs the result in their $SHELL.
 .P
+.B dmenu_run_i
+same as dmenu_run but exec the command in a new terminal if "!" is present in the end.
+.P
 .B dmenu_run_history
 is a script used by
 .IR dwm (1)
 which lists programs in the user's $PATH and runs the result in their $SHELL, and is sorted in frequently used order.
+.P
+.B dmenu_run_history_i
+same as dmenu_run_history but exec the command in a new terminal if "!" is present in the end.
 .SH OPTIONS
 .TP
 .B \-b
