@@ -39,5 +39,5 @@ See the **man page** for more details.
 dmenu_run_history_i -l 20 -c -bw 3 -p 'run'
 ```
 
-![dmenu_run_history_i](screenshot/dmenu_run_history_i.png)
+![dmenu_run_history_i](images/dmenu_run_history_i.png)
 
