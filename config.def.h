@@ -12,14 +12,24 @@ static const char *fonts[] = {
 };
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
 static const char *dynamic     = NULL;      /* -dy option; dynamic command to run on input change */
+// GRUVBOX_DARK
 static const char *colors[SchemeLast][2] = {
                         	/*     fg        bg     */
-	         [SchemeNorm] = { "#f8f8f2", "#282a36" },
-	          [SchemeSel] = { "#282a36", "#ff5555" },
-	 [SchemeSelHighlight] = { "#282a36", "#f1fa8c" },
-	[SchemeNormHighlight] = { "#f1fa8c", "#6272a4" },
-	          [SchemeOut] = { "#000000", "#00ffff" },
+	         [SchemeNorm] = { "#ebdbb2", "#282828" },
+	          [SchemeSel] = { "#282828", "#fb4934" },
+	 [SchemeSelHighlight] = { "#282828", "#fabd2f" },
+	[SchemeNormHighlight] = { "#d79921", "#b16286" },
+	          [SchemeOut] = { "#000000", "#8ec07c" },
 };
+//DRACULA
+//static const char *colors[SchemeLast][2] = {
+//                        	/*     fg        bg     */
+//	         [SchemeNorm] = { "#f8f8f2", "#282a36" },
+//	          [SchemeSel] = { "#282a36", "#ff5555" },
+//	 [SchemeSelHighlight] = { "#282a36", "#f1fa8c" },
+//	[SchemeNormHighlight] = { "#f1fa8c", "#6272a4" },
+//	          [SchemeOut] = { "#000000", "#00ffff" },
+//};
 /* -l and -g options; controls number of lines and columns in grid if > 0 */
 static unsigned int lines      = 0;
 static unsigned int lineheight = 0;         /* -h option; minimum height of a menu line     */
