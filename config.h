@@ -15,11 +15,11 @@ static const char *dynamic     = NULL;      /* -dy option; dynamic command to ru
 // GRUVBOX_DARK
 static const char *colors[SchemeLast][2] = {
                         	/*     fg        bg     */
-	         [SchemeNorm] = { "#ebdbb2", "#282828" },
-	          [SchemeSel] = { "#282828", "#fb4934" },
-	 [SchemeSelHighlight] = { "#282828", "#fabd2f" },
-	[SchemeNormHighlight] = { "#d79921", "#b16286" },
-	          [SchemeOut] = { "#000000", "#8ec07c" },
+	         [SchemeNorm] = { "#ebdbb2", "#1d2021" },
+	          [SchemeSel] = { "#1d2021", "#cc241d" },
+	 [SchemeSelHighlight] = { "#1d2021", "#d79921" },
+	[SchemeNormHighlight] = { "#1d2021", "#d6540e" },
+	          [SchemeOut] = { "#1d2021", "#98971a" },
 };
 //DRACULA
 //static const char *colors[SchemeLast][2] = {
