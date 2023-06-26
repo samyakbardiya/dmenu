@@ -12,24 +12,29 @@ static const char *fonts[] = {
 };
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
 static const char *dynamic     = NULL;      /* -dy option; dynamic command to run on input change */
- // GRUVBOX_MATERIAL
+
+//                                  // GRUVBOX   //  MATERIAL
+static const char col_black[]       = "#282828"; // "#202020";
+static const char col_black1[]      = "#3c3836"; // "#2E2C2B";
+static const char col_gray[]        = "#928374"; // "#928374";
+static const char col_red[]         = "#fb4934"; // "#ea6962";
+static const char col_green[]       = "#b8bb26"; // "#a9b665";
+static const char col_yellow[]      = "#fabd2f"; // "#d8a657";
+static const char col_blue[]        = "#83a598"; // "#7daea3";
+static const char col_purple[]      = "#d3869b"; // "#d3869b";
+static const char col_aqua[]        = "#8ec07c"; // "#89b482";
+static const char col_orange[]      = "#fe8019"; // "#e78a4e";
+static const char col_white[]       = "#ebdbb2"; // "#D4BE98";
+static const char col_white1[]      = "#d5c4a1"; // "#a89984";
+
 static const char *colors[SchemeLast][2] = {
                             /*     fg        bg     */
-             [SchemeNorm] = { "#D4BE98", "#202020" },
-              [SchemeSel] = { "#202020", "#EA6962" },
-     [SchemeSelHighlight] = { "#202020", "#D8A657" },
-    [SchemeNormHighlight] = { "#202020", "#E78A4E" },
-              [SchemeOut] = { "#202020", "#A9B665" },
+             [SchemeNorm] = { col_white, col_black },
+              [SchemeSel] = { col_black, col_red },
+     [SchemeSelHighlight] = { col_black, col_yellow },
+    [SchemeNormHighlight] = { col_black, col_orange },
+              [SchemeOut] = { col_black, col_green },
 };
-// // GRUVBOX_DARK
-//static const char *colors[SchemeLast][2] = {
-//                          /*     fg        bg     */
-//           [SchemeNorm] = { "#ebdbb2", "#1d2021" },
-//            [SchemeSel] = { "#1d2021", "#cc241d" },
-//   [SchemeSelHighlight] = { "#1d2021", "#d79921" },
-//  [SchemeNormHighlight] = { "#1d2021", "#d6540e" },
-//            [SchemeOut] = { "#1d2021", "#98971a" },
-//};
 
 /* -l and -g options; controls number of lines and columns in grid if > 0 */
 static unsigned int lines      = 0;
