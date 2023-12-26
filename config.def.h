@@ -30,11 +30,20 @@ static const char col_white1[]      = "#d5c4a1"; // "#a89984";
 static const char *colors[SchemeLast][2] = {
                             /*     fg        bg     */
              [SchemeNorm] = { col_white, col_black },
-              [SchemeSel] = { col_black, col_red },
+              [SchemeSel] = { col_black, col_blue },
      [SchemeSelHighlight] = { col_black, col_yellow },
     [SchemeNormHighlight] = { col_black, col_orange },
               [SchemeOut] = { col_black, col_green },
 };
+
+/* static const char *colors[SchemeLast][2] = { */
+                            /*     fg        bg     */
+/*              [SchemeNorm] = { "#c8d3f5", "#222436" }, */
+/*               [SchemeSel] = { "#222436", "#82aaff" }, */
+/*      [SchemeSelHighlight] = { "#222436", "#b4f9f8" }, */
+/*     [SchemeNormHighlight] = { "#222436", "#86e1fc" }, */
+/*               [SchemeOut] = { "#222436", "#c3e88d" }, */
+/* }; */
 
 /* -l and -g options; controls number of lines and columns in grid if > 0 */
 static unsigned int lines      = 0;
@@ -42,6 +51,7 @@ static unsigned int lineheight = 0;         /* -h option; minimum height of a me
 static unsigned int columns    = 0;
 
 /*
+ * i
  * Characters not considered part of a word while deleting words
  * for example: " /?\"&[]"
  */
